@@ -1,0 +1,14 @@
+.main-header__title {
+  margin: 0;
+  font-size: 4.5rem;
+  text-shadow: 2px 1px 1px #766a57;
+}
+
+.main-header {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 1px solid #827973;
+}
