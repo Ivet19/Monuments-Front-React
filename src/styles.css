@@ -6,10 +6,9 @@
 
 body {
   margin: 0 auto;
-  max-width: 1000px;
-}
-
-.main-container {
-  margin: 0;
-  padding: 20px;
+  max-width: 1200px;
+  font-family: "Poiret One", system-ui;
+  font-size: 1.3rem;
+  color: #0c0c0c;
+  background-color: #efe8e3;
 }
