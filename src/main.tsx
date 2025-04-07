@@ -1,9 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import "@fontsource/poiret-one/index.css";
 import "./styles.css";
+import App from "./components/App/App";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <div className="main-container"></div>
-  </StrictMode>
+    <App />
+  </StrictMode>,
 );
