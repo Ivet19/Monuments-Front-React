@@ -1,0 +1,15 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.main-container {
+  margin: 0;
+  padding: 20px;
+}
