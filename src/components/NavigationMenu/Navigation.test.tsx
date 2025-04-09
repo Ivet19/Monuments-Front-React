@@ -1,7 +1,6 @@
-import { expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Navigation from "./Navigation";
 import { MemoryRouter } from "react-router";
+import Navigation from "./Navigation";
 
 describe("Given the Navigation component", () => {
   describe("When it renders", () => {
@@ -13,8 +12,12 @@ describe("Given the Navigation component", () => {
       );
 
       const monumentsLink = screen.queryByRole("link", { name: /monuments/i });
+      const addMonumentsLink = screen.getByRole("link", {
+        name: /add new monument/i,
+      });
 
       expect(monumentsLink).toBeVisible();
+      expect(addMonumentsLink).toBeVisible();
     });
   });
 });

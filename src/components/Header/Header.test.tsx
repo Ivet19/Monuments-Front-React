@@ -1,33 +1,38 @@
-import { expect, test } from "vitest";
 import { render, screen } from "@testing-library/react";
-import Header from "./Header";
 import { MemoryRouter } from "react-router";
+import Header from "./Header";
 
 describe("Given the Header component", () => {
   describe("When it renders", () => {
-    beforeEach(() => {
+    test("Then it should show 'Monuments' inside a level 1 heading", () => {
       render(
         <MemoryRouter>
           <Header />
         </MemoryRouter>,
       );
-    });
-    test("Then it should show 'Monuments' inside a level 1 heading", () => {
+
       const appTitle = screen.queryByRole("heading", {
         name: /monuments/i,
         level: 1,
       });
 
-      screen.debug();
-
       expect(appTitle).toBeVisible();
     });
+
     test("Then it should show a 'Monuments' and an 'Add new monument' link", () => {
+      render(
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>,
+      );
+
       const monumentsLink = screen.queryByRole("link", { name: /monuments/i });
+      const addMonumentsLink = screen.getByRole("link", {
+        name: /add new monument/i,
+      });
 
       expect(monumentsLink).toBeVisible();
-
-      expect(monumentsLink).toBeVisible();
+      expect(addMonumentsLink).toBeVisible();
     });
   });
 });
