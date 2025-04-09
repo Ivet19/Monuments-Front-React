@@ -1,16 +1,18 @@
-import Monument from "../types";
+import { mapMonumentsDtoToMonuments } from "./dto/mappers";
+import { MonumentDto } from "./dto/types";
+import { MonumentsClientStructure } from "./types";
 
-class MonumentsClient {
-  async getMonuments(): Promise<Monument[]> {
-    const response = await fetch(
-      `https://monuments-back-1.onrender.com/monuments`,
-    );
+class MonumentsClient implements MonumentsClientStructure {
+  private apiUrl = import.meta.env.VITE_API_URL;
+
+  public async getMonuments(): Promise<MonumentDto[]> {
+    const response = await fetch(`${this.apiUrl}/monuments`);
 
     const { monuments } = (await response.json()) as {
-      monuments: Monument[];
+      monuments: MonumentDto[];
     };
 
-    return monuments;
+    return mapMonumentsDtoToMonuments(monuments);
   }
 }
 
