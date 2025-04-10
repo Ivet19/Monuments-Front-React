@@ -1,0 +1,27 @@
+.monument {
+  background-color: #a99d96;
+  border: 0.5px solid #857d78;
+  border-radius: 2px;
+  padding: 15px;
+  box-shadow: 10px 4px 4px #4b453d;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.monument__name {
+  display: flex;
+  justify-content: center;
+}
+
+.monument__info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+}
+
+.monument__image {
+  border-radius: 4px;
+}
