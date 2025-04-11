@@ -1,6 +1,6 @@
 import React from "react";
 import Monument from "../../types";
-import MonumentCard from "../MonumentCard/MonumentCard";
+import MonumentCard from "../MonumentCard/MonumentCard.tsx";
 import "./MonumentsList.css";
 
 interface MonumentsListProps {
