@@ -1,7 +1,7 @@
 import { MemoryRouter } from "react-router";
 import { screen } from "@testing-library/dom";
 import { render } from "@testing-library/react";
-import MonumentCard from "./monumentCard";
+import MonumentCard from "./MonumentCard";
 import Monument from "../../types";
 import { sagradaFamilia } from "../../fixtures";
 
