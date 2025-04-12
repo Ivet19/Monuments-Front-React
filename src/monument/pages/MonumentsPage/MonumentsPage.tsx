@@ -1,9 +1,9 @@
-import { useContext, useEffect } from "react";
-import { MonumentsContext } from "../../context/MonumentsContext";
+import { useEffect } from "react";
 import MonumentsList from "../../components/MonumentsList/MonumentsList";
+import useMonuments from "../../hooks/useMonuments";
 
 const MonumentsPage: React.FC = () => {
-  const { monuments, loadMonuments } = useContext(MonumentsContext)!;
+  const { monuments, loadMonuments } = useMonuments();
 
   useEffect(() => {
     loadMonuments();
