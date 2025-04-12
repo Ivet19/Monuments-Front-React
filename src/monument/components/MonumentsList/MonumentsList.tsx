@@ -1,5 +1,5 @@
 import React from "react";
-import Monument from "../../types";
+import { Monument } from "../../types";
 import MonumentCard from "../MonumentCard/MonumentCard";
 import "./MonumentsList.css";
 

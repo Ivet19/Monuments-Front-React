@@ -1,4 +1,4 @@
-import Monument from "../../types";
+import { Monument } from "../../types";
 import "./monumentCard.css";
 
 interface MonumentCardProps {
