@@ -1,5 +1,5 @@
 import { Monument } from "../types";
-import MonumentDto from "./types";
+import { MonumentDto } from "./types";
 
 export const mapMonumentsDtoToMonuments = (
   monumentsDto: MonumentDto[],
