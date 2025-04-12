@@ -1,5 +1,5 @@
 import { Monument } from "../../types";
-import "./monumentCard.css";
+import "./MonumentCard.css";
 
 interface MonumentCardProps {
   monument: Monument;

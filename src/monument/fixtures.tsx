@@ -1,4 +1,4 @@
-import Monument from "./types";
+import { Monument } from "./types";
 
 export const simpsonsHouse: Monument = {
   id: "47268910A",

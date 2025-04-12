@@ -1,4 +1,4 @@
-import Monument from "../types";
+import { Monument } from "../types";
 import MonumentDto from "./types";
 
 export const mapMonumentsDtoToMonuments = (

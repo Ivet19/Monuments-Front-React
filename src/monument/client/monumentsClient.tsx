@@ -1,5 +1,5 @@
 import { mapMonumentsDtoToMonuments } from "../dto/mappers";
-import Monument from "../types";
+import { Monument } from "../types";
 import MonumentDto from "../dto/types";
 import { MonumentsClientStructure } from "./types";
 
