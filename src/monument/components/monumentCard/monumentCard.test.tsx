@@ -1,9 +1,9 @@
 import { MemoryRouter } from "react-router";
 import { screen } from "@testing-library/dom";
 import { render } from "@testing-library/react";
+import { sagradaFamilia } from "../../fixtures";
 import MonumentCard from "./MonumentCard";
 import Monument from "../../types";
-import { sagradaFamilia } from "../../fixtures";
 
 describe("Given the MonumentCard component", () => {
   describe("When it recieves Sagrada Familia", () => {
