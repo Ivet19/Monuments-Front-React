@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import NotFoundPage from "./NotFoundPage";
 
-describe("Given the MonumentsPage component", () => {
+describe("Given the NotFoundPage component", () => {
   describe("When it renders", () => {
     test("Then it should show 'Page not found' inside a level 1 heading", () => {
       render(<NotFoundPage />);
