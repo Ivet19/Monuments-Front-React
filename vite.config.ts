@@ -12,10 +12,10 @@ export default defineConfig({
     reporters: ["verbose"],
     coverage: {
       reportsDirectory: "../coverage",
-      exclude: ["main.tsx"],
       provider: "v8",
       reporter: ["text", "json", "html"],
       include: ["**/*.ts", "**/*.tsx"],
+      exclude: ["main.tsx", "vite-env.d.ts"],
     },
   },
 });

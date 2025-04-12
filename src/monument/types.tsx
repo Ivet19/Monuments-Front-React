@@ -1,4 +1,4 @@
-interface Monument {
+export interface Monument {
   id: string;
   name: string;
   description: string;
@@ -7,5 +7,3 @@ interface Monument {
   country: string;
   city: string;
 }
-
-export default Monument;
