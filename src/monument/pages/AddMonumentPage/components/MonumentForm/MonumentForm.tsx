@@ -5,9 +5,9 @@ const MonumentForm: React.FC = () => {
     <>
       <h2 className="main-title">Add a new monument</h2>
       <form className="monument-form">
-        <p className="monument-form__instructions">
-          Please fill out the following form to create a new monument:
-        </p>
+        <h3 className="monument-form__instructions">
+          Please fill out the following form to create a new monument
+        </h3>
         <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
