@@ -21,7 +21,7 @@ class MonumentsClient implements MonumentsClientStructure {
   public async addMonument(monumentData: MonumentData): Promise<Monument> {
     const apiUrl = import.meta.env.VITE_API_URL;
 
-    const response = await fetch(`${apiUrl}/add-new-monument`, {
+    const response = await fetch(`${apiUrl}/monuments/add-new-monument`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(monumentData),
