@@ -12,3 +12,14 @@ export const mapMonumentsDtoToMonuments = (
 
   return monuments;
 };
+
+export const mapMonumentDtoToMonument = (
+  monumentDto: MonumentDto,
+): Monument => {
+  const monument: Monument = {
+    ...monumentDto,
+    imageAlt: `general view of the ${name} monument`,
+  };
+
+  return monument;
+};
