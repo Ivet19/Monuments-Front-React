@@ -11,3 +11,17 @@ body {
   color: #0c0c0c;
   background-color: #efe8e3;
 }
+
+ul,
+li {
+  margin: 0;
+}
+
+button {
+  background-color: none;
+  border: none;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}

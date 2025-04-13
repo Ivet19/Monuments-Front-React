@@ -1,0 +1,61 @@
+.main-title {
+  margin: 0;
+}
+
+.monument-form {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+  font-size: 1.5rem;
+  background-color: #a99d96;
+  border: 0.5px solid #857d78;
+  border-radius: 2px;
+  box-shadow: 10px 4px 4px #4b453d;
+}
+
+.monument-form__instructions {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.monument-form__text-box {
+  background-color: #efe8e3;
+  border-radius: 4px;
+  border: 1px solid #4b453d;
+  padding: 7px;
+  height: 40px;
+  font-size: 0.5rem;
+  font: inherit;
+
+  &:hover {
+    background-color: #cabfb7;
+  }
+}
+
+.monument-form__button {
+  width: fit-content;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  color: inherit;
+  padding: 5px;
+  border: 1px solid #857d78;
+  background-color: #4b453d;
+  color: #fff;
+  box-shadow: 10px 4px 4px #4b453d;
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #efe8e3;
+    color: #000;
+  }
+}
