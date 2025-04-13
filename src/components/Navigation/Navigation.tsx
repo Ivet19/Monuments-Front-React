@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink className="navigation-link" to="/add">
+          <NavLink className="navigation-link" to="/add-new-monument">
             Add new monument
           </NavLink>
         </li>

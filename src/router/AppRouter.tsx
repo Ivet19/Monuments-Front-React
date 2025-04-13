@@ -10,7 +10,7 @@ const AppRouter: React.FC = () => {
       <Route path="/" element={<App />}>
         <Route index element={<Navigate to="/monuments" />} />
         <Route path="/monuments" element={<MonumentsPage />} />
-        <Route path="/add" element={<AddMonumentPage />} />
+        <Route path="/add-new-monument" element={<AddMonumentPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

@@ -9,11 +9,19 @@ describe("Given the MonumentCard component", () => {
       const monument: Monument = sagradaFamilia;
       render(<MonumentCard monument={monument} />);
 
-      const cardName = screen.getByRole("heading", {
+      const monumentName = screen.getByRole("heading", {
         name: /sagrada familia/i,
       });
 
-      expect(cardName).toBeVisible();
+      expect(monumentName).toBeVisible();
+    });
+
+    test("Then it should show general view of Sagrada Familia monument", () => {
+      render(<MonumentCard monument={sagradaFamilia} />);
+
+      const monumentImage = screen.getByAltText(sagradaFamilia.imageAlt);
+
+      expect(monumentImage).toBeVisible();
     });
   });
 });
