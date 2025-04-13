@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import MonumentForm from "./MonumentForm";
 import { MemoryRouter } from "react-router";
-import MonumentsContextProvider from "../../../../context/MonumentsContextProvider";
+import MonumentsContextProvider from "../../context/MonumentsContextProvider";
 
 describe("Given the MonumentForm component", () => {
   describe("When it renders", () => {

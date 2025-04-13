@@ -1,4 +1,4 @@
-import MonumentForm from "./components/MonumentForm/MonumentForm";
+import MonumentForm from "../../components/MonumentForm/MonumentForm";
 import "./AddMonumentPage.css";
 
 const AddMonumentPage: React.FC = () => {

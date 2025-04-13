@@ -3,6 +3,7 @@ import { MonumentsContext } from "./MonumentsContext";
 import MonumentsContextStructure from "./types";
 import MonumentsClient from "../client/monumentsClient";
 import { Monument } from "../types";
+import { MonumentData } from "../types";
 
 const MonumentsContextProvider: React.FC<PropsWithChildren> = ({
   children,
@@ -17,9 +18,16 @@ const MonumentsContextProvider: React.FC<PropsWithChildren> = ({
     setMonuments(apiMonuments);
   }, [monumentClient]);
 
+  const createMonument = async (monumentData: MonumentData): Promise<void> => {
+    const newMonument = await monumentClient.addMonument(monumentData);
+
+    setMonuments((monuments) => [...monuments, newMonument]);
+  };
+
   const monumentsContextValue: MonumentsContextStructure = {
     monuments,
     loadMonuments,
+    createMonument,
   };
 
   return (
