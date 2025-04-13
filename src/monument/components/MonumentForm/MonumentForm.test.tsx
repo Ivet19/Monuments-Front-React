@@ -4,18 +4,23 @@ import { MemoryRouter } from "react-router";
 import MonumentsContextProvider from "../../context/MonumentsContextProvider";
 
 describe("Given the MonumentForm component", () => {
+  const action = vitest.fn();
+
+  beforeEach(() => {
+    action.mockClear();
+  });
   describe("When it renders", () => {
-    test("Then it should show 'Add a new monument' inside a heading", () => {
+    test("Then it should show 'Please fill out the following form to create a new monument", () => {
       render(
         <MonumentsContextProvider>
           <MemoryRouter>
-            <MonumentForm />
+            <MonumentForm action={action} />
           </MemoryRouter>
         </MonumentsContextProvider>,
       );
 
       const formTitle = screen.getByRole("heading", {
-        name: /add a new monument/i,
+        name: /please fill out the following form to create a new monument/i,
       });
 
       expect(formTitle).toBeVisible();
@@ -25,7 +30,7 @@ describe("Given the MonumentForm component", () => {
       render(
         <MonumentsContextProvider>
           <MemoryRouter>
-            <MonumentForm />
+            <MonumentForm action={action} />
           </MemoryRouter>
         </MonumentsContextProvider>,
       );
@@ -39,7 +44,7 @@ describe("Given the MonumentForm component", () => {
       render(
         <MonumentsContextProvider>
           <MemoryRouter>
-            <MonumentForm />
+            <MonumentForm action={action} />
           </MemoryRouter>
         </MonumentsContextProvider>,
       );
@@ -53,7 +58,7 @@ describe("Given the MonumentForm component", () => {
       render(
         <MonumentsContextProvider>
           <MemoryRouter>
-            <MonumentForm />
+            <MonumentForm action={action} />
           </MemoryRouter>
         </MonumentsContextProvider>,
       );
