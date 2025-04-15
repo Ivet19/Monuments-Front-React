@@ -21,7 +21,7 @@ class MonumentsClient implements MonumentsClientStructure {
   public async addMonument(monumentData: MonumentData): Promise<Monument> {
     const apiUrl = import.meta.env.VITE_API_URL;
 
-    const response = await fetch(`${apiUrl}/monuments/add-new-monument`, {
+    const response = await fetch(`${apiUrl}/monuments`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(monumentData),
@@ -34,6 +34,17 @@ class MonumentsClient implements MonumentsClientStructure {
     const newMonument = (await response.json()) as MonumentDto;
 
     return mapMonumentDtoToMonument(newMonument);
+  }
+
+  public async deleteMonument(monumentId: string): Promise<Monument> {
+    const response = await fetch(`${this.apiUrl}/monuments/${monumentId}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const deletedMonument = (await response.json()) as MonumentDto;
+
+    return mapMonumentDtoToMonument(deletedMonument);
   }
 }
 

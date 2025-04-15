@@ -39,3 +39,22 @@
   border-radius: 4px;
   font-size: 1.5rem;
 }
+
+.monument__delete-button {
+  width: fit-content;
+  align-self: flex-end;
+  font-size: 1.2rem;
+  color: inherit;
+  padding: 5px;
+  border: 1px solid #857d78;
+  background-color: #4b453d;
+  color: #fff;
+  box-shadow: 10px 4px 4px #4b453d;
+  border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #efe8e3;
+    color: #000;
+  }
+}

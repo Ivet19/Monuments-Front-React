@@ -24,10 +24,19 @@ const MonumentsContextProvider: React.FC<PropsWithChildren> = ({
     setMonuments((monuments) => [...monuments, newMonument]);
   };
 
+  const removeMonumentById = async (monumentId: string): Promise<void> => {
+    const removedMonument = await monumentClient.deleteMonument(monumentId);
+
+    setMonuments((monuments) =>
+      monuments.filter((monument) => monument.id !== removedMonument.id),
+    );
+  };
+
   const monumentsContextValue: MonumentsContextStructure = {
     monuments,
     loadMonuments,
     createMonument,
+    removeMonumentById,
   };
 
   return (

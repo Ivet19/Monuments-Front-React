@@ -5,4 +5,5 @@ import { Monument } from "../types";
 export interface MonumentsClientStructure {
   getMonuments: () => Promise<MonumentDto[]>;
   addMonument: (monumentData: MonumentData) => Promise<Monument>;
+  deleteMonument: (monumentId: string) => Promise<Monument>;
 }
